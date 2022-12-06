@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="prg10.css"?>
+<curriculum name="resume" xmlns:xsi="http://www.w3.org/2001/XMLSchemainstance" xsi:noNamespaceSchemaLocation="prg10.xsd">
+<title1>RESUME</title1>
+<personaldetails>
+<title>PERSONAL DETAILS</title>
+<name>NAME: MSCSS</name>
+<address>ADDRESS:Coimbatore</address>
+<phno>PHONE NUMBER:9987456320</phno>
+</personaldetails>
+<candidatedetails>
+<title>CANDIDATE DETAILS</title>
+<collegename>COLLEGE NAME:SKASC</collegename>
+<qualification>QUALIFICATION:M.Sc Software Systems</qualification><cgpa>CGPA:8.4</cgpa>
+<schoolname>SCHOOLNAME:SSVM Institutions</schoolname>
+<board>BOARD:CBSE</board>
+<sslc>SSLC PERCENTAGE:93%</sslc>
+<hsc>HSC PERCENTAGE:92%</hsc>
+</candidatedetails>
+<progskills>
+<title>OTHER SKILLS</title>
+<prg>PROGRAMMING SKILLS: HTML,C,C++,JAVA,PYTHON</prg><certificate>CERTIFIED BY: NPTEL</certificate>
+</progskills>
+</resume>
+***************************************************
+Prg10.CSS:
+*{
+background-color:aqua;
+}
+title1
+{
+display:block;
+font-size:28pt;
+color:red;
+margin-left: 130pt;
+}
+title
+{
+display:block;
+font-size:28pt;
+color:green;
+margin-left: 80pt;
+}
+name
+{
+display:block;
+color:red;
+font-size:24pt;
+}
+address,phno
+{
+display:block;
+color:purple;
+font-size:20pt;
+margin-left:20pt;
+}
+collegename,qualification,cgpa,board,sslc,hsc,schoolname
+{
+display:block;
+margin-left:20pt;
+color:purple;
+font-size:20pt;
+font-family:"monotype corsiva";
+}
+prg,certificate
+{
+display:block;
+margin-left:20pt;
+font-size:20pt;
+color:blue;
+font-family:"comic sans ms";
+}
+***************************************
+Prg10.XSD:
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> <xs:element
+name="resume">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="curriculum">
+<xs:complexType> <xs:sequence>
+<xs:element name="resume">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="name" type="xs:string"/>
+<xs:element name="address" type="xs:string"/>
+<xs:element name="phno" type="xs:positiveInteger"/>
+<xs:element name="collegename" type="xs:string"/>
+<xs:element name="qualification" type="xs:string"/>
+<xs:element name="cgpa" type="xs:positiveInteger"/>
+<xs:element name="board" type="xs:string"/>
+<xs:element name="schoolname" type="xs:positiveInteger"/>
+<xs:element name="hsc" type="xs:positiveInteger"/>
+<xs:element name="sslc" type="xs:positiveInteger"/>
+<xs:element name="certificate" type="xs:string"/>
+<xs:element name="prg" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:schema>
