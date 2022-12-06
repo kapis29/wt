@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="prg9.css"?>
+<books xmlns:xsi="http:www.w3.org/2001/xmlschema-instance" xsi:noNamespaceSchemaLocation="books.xsd">
+<heading>BOOK INFORMATION USING SCHEMA ELEMENT</heading><book>
+<title>Web program</title>
+<author>Chirs bates</author>
+<isbn>81-265</isbn>
+<publisher>Wiley</publisher>
+<edition>Second</edition>
+<price>300</price>
+</book>
+<book>
+<title>Java server page</title>
+<author>Hans bergsten</author>
+<isbn>81-265</isbn>
+<publisher>O'Relilly</publisher>
+<edition>Second</edition>
+<price>200</price>
+</book>
+<book>
+<title>C++</title>
+<author>Balaguruswamy</author>
+<isbn>81-695</isbn>
+<publisher>Tata</publisher>
+<edition>Second</edition>
+<price>400</price>
+</book>
+</books>
+******************
+Books.XSD:
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="books">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="book" minOccurs="1" maxOccurs="unbounded"/></xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="book">
+<xs:complexType>
+<xs:sequence>
+<xs:element ref="title" minOccurs="1" maxOccurs="1"/>
+<xs:element ref="auther" minOccurs="1" maxOccurs="1"/>
+<xs:element ref="isbn" minOccurs="1" maxOccurs="1"/>
+<xs:element ref="publisher" minOccurs="1" maxOccurs="1"/>
+<xs:element ref="edition" minOccurs="1" maxOccurs="1"/>
+<xs:element ref="price" type="xs:string" minOccurs="1" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="title" type="xs.string"/>
+<xs:element name="auther" type="xs.string"/>
+<xs:element name="isbn" type="xs.string"/>
+<xs:element name="publisher" type="xs.string"/>
+<xs:element name="edition" type="xs.string"/>
+<xs:element name="price" type="xs.string"/>
+</xs:schema>
+******************
+Prg9.CSS:
+books
+{
+background-color: lightgreen;
+}
+author, publisher, edition, isbn, price
+{
+display:block;
+color:blue;
+font-size:20px;
+margin-left:20px;
+}
+heading
+{
+font-size:40px;
+}
+title
+{
+display:block;
+font-size:30px;
+color:red;
+}
