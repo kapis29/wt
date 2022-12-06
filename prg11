@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="prg11.xsl"?>
+<catalog>
+<student>
+<name>SURYA</name>
+<rollno>1</rollno>
+<address>Sabapathi Street</address>
+<emailid>abc@gmail.com</emailid>
+<fathername>Ram</fathername>
+</student>
+<student>
+<name>VIRAT</name>
+<rollno>2</rollno>
+<address>Nerhu Street</address>
+<emailid>xyz@gmail.com</emailid>
+<fathername>krishna</fathername>
+</student>
+<student>
+<name>RAHUL</name>
+<rollno>18</rollno>
+<address>Thillai Street</address>
+<emailid>cde@gmail.com</emailid>
+<fathername>bala</fathername>
+</student>
+<student>
+<name>ROHITH</name>
+<rollno>24</rollno>
+<address>Gandhi Street</address>
+<emailid>abc01@gmail.com</emailid>
+<fathername>Akil</fathername>
+</student>
+<student>
+<name>ASHWIN</name>
+<rollno>44</rollno>
+<address>subash Street</address>
+<emailid>abc02@gmail.com</emailid>
+<fathername>Akil</fathername>
+</student>
+</catalog>
+
+*****************************************************
+Prg11.XSL:
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+<html>
+<body bgcolor="white">
+<h2 align="center">STUDENT DETAILS</h2>
+<table border="2" align="center" bgcolor="aqua"> <tr>
+<th>Name</th>
+<th>Rollno</th>
+<th>Address</th>
+<th>Emailid</th>
+<th>Fathername</th>
+</tr>
+<xsl:for-each select="catalog/student">
+<tr>
+<td><xsl:value-of select="name"/></td>
+<td><xsl:value-of select="rollno"/></td>
+<td><xsl:value-of select="address"/></td>
+<td><xsl:value-of select="emailid"/></td>
+<td><xsl:value-of select="fathername"/></td>
+</tr>
+</xsl:for-each>
+</table>
+</body>
+</html>
+</xsl:template>
+</xsl:stylesheet>
