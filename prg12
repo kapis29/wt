@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="prg12.xsl"?>
+<mark>
+<detail>
+<name>surya</name>
+<rollno>01</rollno>
+<m1>90</m1>
+<m2>80</m2>
+<m3>97</m3>
+<total>267</total>
+<average>89</average>
+</detail>
+<detail>
+<name>virat</name>
+<rollno>02</rollno>
+<m1>99</m1>
+<m2>88</m2>
+<m3>95</m3>
+<total>282</total>
+<average>94</average>
+</detail>
+<detail>
+<name>rohith</name>
+<rollno>03</rollno>
+<m1>90</m1>
+<m2>80</m2>
+<m3>99</m3>
+<total>269</total>
+<average>89</average>
+</detail>
+<detail>
+<name>ashwin</name>
+<rollno>04</rollno>
+<m1>99</m1>
+<m2>88</m2>
+<m3>95</m3>
+<total>282</total>
+<average>94</average>
+</detail>
+<detail>
+<name>vijay</name>
+<rollno>05</rollno>
+<m1>90</m1>
+<m2>80</m2>
+<m3>99</m3>
+<total>269</total>
+<average>89</average>
+</detail>
+</mark>
+*********************************************************************
+Prg12.XSL:
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+<html>
+<body bgcolor="lightpink">
+<h2 align="center"> MARK STATEMENT</h2>
+<table border="/" align="center">
+<tr bgcolor="violet">
+<th> NAME </th>
+<th> ROLLNO</th>
+<th> PYTHON </th>
+<th> JAVA </th>
+<th> WEB </th>
+<th> TOTAL</th>
+<th> AVERAGE</th>
+</tr>
+<xsl:for-each select="mark/detail">
+<tr bgcolor="yellow">
+<td><font color="red"><xsl:value-of select="name"/></font> </td>
+<td><xsl:value-of select="rollno"/></td>
+<td><xsl:value-of select="m1"/></td>
+<td><xsl:value-of select="m2"/></td>
+<td><xsl:value-of select="m3"/></td>
+<td><xsl:value-of select="total"/></td>
+<td><xsl:value-of select="average"/></td>
+</tr>
+</xsl:for-each>
+</table>
+</body>
+</html>
+</xsl:template>
+</xsl:stylesheet>
