@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<addresses>
+<address>
+<name>messi</name>
+<doorno>3/12a</doorno>
+<street>Koniayamman Kovil street</street>
+<town>Kuniamuthur</town>
+<district>Coimbatore</district>
+<state>Tamilnadu</state>
+<pincode>641002</pincode>
+</address>
+<address>
+<name>ronaldo</name>
+<doorno>#34-2</doorno>
+<street>Vinayagar street</street>
+<town>Sundarapuram</town>
+<district>Coimbatore</district>
+<state>Tamilnadu</state>
+<pincode>641002</pincode>
+</address>
+</addresses>
+
+***********************************************************************************************************************************************************************************
+style.xsl
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+<html>
+<body>
+<h1 align="center">Address Details</h1>
+<table border="3" align="center" >
+<tr bgcolor="#FF00FF">
+<th>Name</th>
+<th>Doorno</th>
+<th>Street</th>
+<th>Town</th>
+<th>District</th>
+<th>State</th>
+<th>Pincode</th>
+</tr>
+<xsl:for-each select="addresses/address">
+<tr bgcolor="#9acd32">
+<td><xsl:value-of select="name"/></td>
+<td><xsl:value-of select="doorno"/></td>
+<td><xsl:value-of select="street"/></td>
+<td><xsl:value-of select="town"/></td>
+<td><xsl:value-of select="district"/></td>
+<td><xsl:value-of select="state"/></td>
+<td><xsl:value-of select="pincode"/></td>
+</tr>
+</xsl:for-each>
+</table>
+</body>
+</html>
+</xsl:template>
+</xsl:stylesheet>
