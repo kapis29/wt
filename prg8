@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="prg8.css"?>
+<!DOCTYPE book SYSTEM "book.dtd">
+<book>
+<heading>BOOK INFORMATION USING DTD</heading>
+<CD>
+<TITLE>Empire Burlesque</TITLE>
+<ARTIST>Bob Dylan</ARTIST>
+<COUNTRY>USA</COUNTRY>
+<COMPANY>Columbia</COMPANY>
+<PRICE>10.90</PRICE>
+<YEAR>1985</YEAR>
+</CD>
+<CD>
+<TITLE>Hide your heart</TITLE>
+<ARTIST>Bonnie Tyler</ARTIST>
+<COUNTRY>UK</COUNTRY>
+<COMPANY>CBS Records</COMPANY>
+<PRICE>9.90</PRICE>
+<YEAR>1988</YEAR>
+</CD>
+<CD>
+<TITLE>Greatest Hits</TITLE>
+<ARTIST>Dolly Parton</ARTIST>
+<COUNTRY>USA</COUNTRY>
+<COMPANY>RCA</COMPANY>
+<PRICE>9.90</PRICE>
+<YEAR>1982</YEAR>
+</CD>
+</book>
+*****************
+Book.dtd:
+<!ELEMENT book (CD,TITLE,ARTIST,COUNTRY,PRICE,YEAR)><!ELEMENT CD (#PCDATA)>
+<!ELEMENT TITLE (#PCDATA)>
+<!ELEMENT ARTIST (#PCDATA)>
+<!ELEMENT COUNTRY (#PCDATA)>
+<!ELEMENT PRICE (#PCDATA)>
+<!ELEMENT YEAR (#PCDATA)>
+
+*****************
+Prg8.CSS:
+book
+{
+background-color: SandyBrown;
+width: 100%;
+}
+body
+{
+color:GREEN;
+margin-left:20pt;
+}
+CD
+{
+display: block;
+margin-bottom: 30pt;
+margin-left: 0;
+}
+TITLE
+{
+color: white;
+font-size: 20pt;
+}
+ARTIST
+{
+color: red;
+font-size: 20pt;
+font-family:"Monotype Corsiva";
+}
+COUNTRY,PRICE,YEAR,COMPANY
+{
+display: block;
+color: GREEN;
+margin-left: 20pt;
+font-family:"Courier New" }
+heading
+{
+font-size:30pt;
+text-align:"center";
+font-family:"Comic Sans
