@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>CurrencyConvertion</title>
+</head>
+<body bgcolor="lightgreen">
+<h1>CURRENCY CONVERSION</h1><br><br>
+<input type="text" id="user-inp" placeholder="Enter currency"><br><br>FROM <select name="options" id="user-opt">
+<option value="#"></option>
+<option value="USA">USA</option>
+<option value="IND">IND</option>
+<option value="PAK">PAK</option>
+</select>
+TO <select name="options" id="user-sel">
+<option value="#"></option>
+<option value="USA">USA</option>
+<option value="IND">IND</option>
+<option value="PAK">PAK</option>
+</select><br><br>
+<button id="submit">Convert</button>
+<button id="reload">Reset</button><br>
+<h2>CONVERTED AMOUNT</h2>
+<input type="text" id="user-out" readonly><br><br>
+</div>
+<script>
+let btn = document.getElementById("submit")
+let btn_relod = document.getElementById("reload")
+btn.addEventListener("click",()=>{
+let userOpt = document.getElementById("user-opt")
+let user_opt = userOpt.options[userOpt.selectedIndex]
+let userSel = document.getElementById("user-sel")
+let user_sel = userSel.options[userSel.selectedIndex]
+let user_input = document.getElementById("user-inp")
+let user_output = document.getElementById("user-out")
+if(user_opt.text=="USA" && user_sel.text=="IND"){
+let convertor = user_input.value*81.68
+user_output.value = convertor.toFixed(4)
+}
+else if(user_opt.text=="USA" && user_sel.text=="PAK"){
+let convertor = user_input.value*221.40
+user_output.value = convertor.toFixed(4)
+}
+else if(user_opt.text=="IND" && user_sel.text=="USA"){
+let convertor = user_input.value/81.68
+user_output.value = convertor.toFixed(4)
+}
+else if(user_opt.text=="IND" && user_sel.text=="PAK"){
+let convertor = user_input.value*2.70
+user_output.value = convertor.toFixed(4)
+}
+else if(user_opt.text=="PAK" && user_sel.text=="USA"){
+let convertor = user_input.value/221.40
+user_output.value = convertor.toFixed(4)
+}
+else if(user_opt.text=="PAK" && user_sel.text=="IND"){
+let convertor = user_input.value/2.70
+user_output.value = convertor.toFixed(4)
+}
+})
+btn_relod.addEventListener("click",()=>{
+location.reload()
+})
+</script>
+</body>
+</html>
