@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Document</title>
+</head>
+<body bgcolor=”skyblue”>
+<form action="#">
+<h1>Login Here.....</h1>
+USERNAME <input type="text" id="name" placeholder="Enter Your
+Username"><br><br>
+PASSWORD <input type="password" id="pass" placeholder="Enter your
+Password"><br><br>
+<input type="button" id="submit" value="submit">
+</form>
+<script>
+let btn=document.querySelector("#submit")
+btn.addEventListener("click",function(){
+let fname=document.getElementById("name").value
+let fpass=document.getElementById("pass").value
+if(fname=="" || fpass=="")
+{
+alert("enter the value")
+}
+else{
+alert("login successfull")
+}
+})
+</script>
+</body>
+</html>
