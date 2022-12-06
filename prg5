@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="lightgreen">
+    <style>
+        #name{
+            margin-left: 25px;
+        }
+        #id{
+            margin-left: 45px;
+        }
+    </style>
+    <h1>PAYROOL CALCULATION</h1>
+    Enter Name       <input type="text" id="name" placeholder="Enter Name"><br><br>
+    Enter ID         <input type="number" id="id" placeholder="Enter ID"><br><br>
+    Enter Basic Pay  <input type="number" id="basic" placeholder="Enter Basic Pay"><br><br>
+    <input type="button" id="net" value="Calculate Net Pay" onclick="calculate()"><br><br>
+    SALARY<textarea cols="20" rows="9" id="sal"></textarea>
+    <script>
+        function calculate(){
+            var name =document.getElementById("name").value;
+            var eid = document.getElementById("id").value;
+            var bp = parseFloat(document.getElementById("basic").value);
+            var hra = bp*10/100;
+            var da = bp*5/100;
+            var lic = bp*7/100;
+            var pf = bp*12/100;
+            var net=document.getElementById("sal");
+            let salary=bp+hra+da-lic-pf;
+            net.innerHTML='Name : '+name+'\nID : '+eid+'\nBP:'+bp+'\nHRA:'+hra+'\nDA:'+da+'\nLIC:'+lic+'\nPF:'+pf+'\nNetPay : '+salary;
+        }
+    </script>
+</body>
+</html>
