@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Document</title>
+</head>
+<style>
+input{
+margin-left: 1.5rem;
+}
+input:nth-child(2){
+margin-left: .4rem;
+}
+</style>
+<body bgcolor=”skyblue”>
+<h1>Fahrenheit to Celsius Converter</h1>
+Enter Fahrenheit <input type="number" id="fah"><br><br>
+Celsius Value <input type="number" id="cel" readonly><br><br><input type="submit" id="btn" value="CONVERT">
+<script>
+let bt=document.querySelector("#btn")
+bt.addEventListener("click",function(){
+let fa=document.getElementById("fah").value
+let ce=(fa-32)*5/9
+document.getElementById("cel").value = ce
+})
+</script>
+</body>
+</html>
